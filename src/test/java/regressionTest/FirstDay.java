@@ -20,7 +20,7 @@ public class FirstDay {
 	
 	public static void main(String[] args) {
 		
-		System.setProperty("webdriver.chrome.driver", "");
+		System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
 	    driver = new ChromeDriver();
 	    
 	    UtilityLibrary lib = new UtilityLibrary(driver);
