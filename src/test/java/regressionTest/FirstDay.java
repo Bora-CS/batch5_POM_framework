@@ -7,6 +7,8 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
 
 import testData.Locators;
 import testData.TestingData;
@@ -16,16 +18,17 @@ import utilities.ValidationClass;
 public class FirstDay {
 
 	static WebDriver driver;
+	@Test
 	
-	
-	public static void main(String[] args) {
+	public void firstTest() {
 		
-		System.setProperty("webdriver.chrome.driver", "");
+		System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
 	    driver = new ChromeDriver();
+	   // driver.manage().wait();
 	    
 	    UtilityLibrary lib = new UtilityLibrary(driver);
 	    ValidationClass validate = new ValidationClass(driver);
-		
+	   
 	    // 1. Goto URL
 		driver.get(TestingData.HomePageURL);
 		
@@ -51,6 +54,13 @@ public class FirstDay {
 		
 		// 5. Goto cart page
 		lib.clickElement(Locators.cartIcon);
+		
+		}
+	    
+	   @AfterMethod
+	    public void endTest() {
+	    	driver.quit();
+	    //}
 		
 		
 	}

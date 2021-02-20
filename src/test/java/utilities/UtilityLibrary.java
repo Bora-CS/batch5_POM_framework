@@ -11,9 +11,6 @@ public class UtilityLibrary {
 		this.driver = passedDriver;
 	}
 	
-	
-	
-	
 	public void waitTime(int second){
 		try {
 			Thread.sleep(second*1000);
@@ -25,7 +22,6 @@ public class UtilityLibrary {
 	public void fillTextBox(By locator, String testData){
 		driver.findElement(locator).sendKeys(testData);
 	}
-	
 	
 	public void clickElement(By locator){
 		driver.findElement(locator).click();
