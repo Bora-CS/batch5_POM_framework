@@ -26,7 +26,6 @@ public class UtilityLibrary {
 		driver.findElement(locator).sendKeys(testData);
 	}
 	
-	
 	public void clickElement(By locator){
 		driver.findElement(locator).click();
 	}
