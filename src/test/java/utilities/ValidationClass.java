@@ -9,18 +9,27 @@ import org.openqa.selenium.WebElement;
 public class ValidationClass {
 
 	private WebDriver driver;
-	
-	public ValidationClass(WebDriver passedDriver){
+
+	public ValidationClass(WebDriver passedDriver) {
 		this.driver = passedDriver;
 	}
-	
-	public boolean verifyElementExist(By locator){
-		
+
+	public boolean verifyElement (By locator, String elementText){
+		String actualText = driver.findElement(locator).getText();
+		if (actualText.equalsIgnoreCase(elementText)){
+		return true;
+		} 
+		return false;
+	}
+	public boolean verifyElementExist(By locator) {
+
 		List<WebElement> lists = driver.findElements(locator);
-		boolean exist = lists.size()>0;
+		boolean exist = lists.size() > 0;
 		return exist;
 	}
+	public String testPassed (){
+		return "Test passed";
+		}
 	
-	
-	
+
 }

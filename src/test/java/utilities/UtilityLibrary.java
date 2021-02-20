@@ -6,28 +6,30 @@ import org.openqa.selenium.WebDriver;
 public class UtilityLibrary {
 
 	private WebDriver driver;
-	
-	public UtilityLibrary(WebDriver passedDriver){
+
+	public UtilityLibrary(WebDriver passedDriver) {
 		this.driver = passedDriver;
 	}
-	
-	
-	
-	
-	public void waitTime(int second){
+
+	public void waitTime(int second) {
 		try {
-			Thread.sleep(second*1000);
+			Thread.sleep(second * 1000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 	}
-	
-	public void fillTextBox(By locator, String testData){
+
+	public void fillTextBox(By locator, String testData) {
 		driver.findElement(locator).sendKeys(testData);
 	}
-	
-	
-	public void clickElement(By locator){
+
+	public void clickElement(By locator) {
 		driver.findElement(locator).click();
+	}
+	
+	public void closeDriver(WebDriver passedDriver){
+		this.driver = passedDriver;
+		driver.close();
+		driver.quit();
 	}
 }
