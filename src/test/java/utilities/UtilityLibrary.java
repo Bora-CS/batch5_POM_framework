@@ -2,6 +2,9 @@ package utilities;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class UtilityLibrary {
 
@@ -12,7 +15,10 @@ public class UtilityLibrary {
 	}
 	
 	
-	
+	public String getText(By locator) {
+		String text = driver.findElement(locator).getText();
+		return text;
+	}
 	
 	public void waitTime(int second){
 		try {
@@ -23,6 +29,9 @@ public class UtilityLibrary {
 	}
 	
 	public void fillTextBox(By locator, String testData){
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+		
 		driver.findElement(locator).sendKeys(testData);
 	}
 	
