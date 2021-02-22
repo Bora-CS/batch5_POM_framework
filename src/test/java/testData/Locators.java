@@ -14,4 +14,7 @@ public class Locators {
 	final public static By plp_alert_close = By.id("agegate-closeX");
 
 	final public static By cartIcon = By.id("at_cartIcon");
+	final public static By header_searchBar = By.xpath("//input[@type='text']");
+	final public static String plp_listOfProductNameByXpath="(//h2[contains(@class,'title')])";
+	final public static By header_button_firstPickUpHere = By.xpath("(//*[text()='Pick Up Here'])[1]");
 }

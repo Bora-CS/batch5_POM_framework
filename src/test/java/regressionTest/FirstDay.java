@@ -1,14 +1,18 @@
 package regressionTest;
 
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import pages.AddProductPage;
+import pages.HeaderComponet;
+import pages.ProductListPage;
 import testData.Locators;
 import testData.TestingData;
 import utilities.UtilityLibrary;
@@ -17,49 +21,56 @@ import utilities.ValidationClass;
 public class FirstDay {
 	static WebDriver driver;
 
-	public static void main(String[] args) {
+	UtilityLibrary lib;
+	ValidationClass validate;
+	HeaderComponet header;
+	ProductListPage plp;
+	AddProductPage app;
 
-		System.setProperty("webdriver.chrome.driver", "src/main/java/resource/chromedriver");
+	@BeforeMethod
+	public void startTest() {
+		System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
 		driver = new ChromeDriver();
-
-		UtilityLibrary lib = new UtilityLibrary(driver);
-		ValidationClass validate = new ValidationClass(driver);
-		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;
-		try {
-		// 1. Goto URL
+		lib = new UtilityLibrary(driver);
+		validate = new ValidationClass(driver);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get(TestingData.HomePageURL);
-		// 2. Change store
-		lib.clickElement(Locators.storeName);
-		lib.fillTextBox(Locators.searchStoreTextBox, TestingData.ManassasStore + Keys.ENTER);
-		lib.clickElement(Locators.pickUpButton_Manassas);
-		lib.waitTime(2);
-		// 3. Goto wine PLP - Product List page
-		lib.clickElement(Locators.wineDepartment);
-		// verify we are successfully land on the PLP
-		//validate.verifyElementExist(Locators.winePLPHeader);
-		boolean exist = validate.verifyElement(Locators.winePLPHeader, TestingData.winePageH1Text);
-		if(!exist){
-			System.out.println("The actual text should be [" +TestingData.winePageH1Text+"]");
-		}
-		// 4. Add first 5 products into cart
-		List<WebElement> elems = driver.findElements(Locators.addToCart_Buttons);
-		for (int i = 0; i < elems.size(); i++) {
-			elems.get(i).click();
-			lib.clickElement(Locators.plp_alert_close);
-			if (i==4){
-				break;
-			}
-		}
-		// 5. Goto cart page
-		lib.clickElement(Locators.cartIcon);
-		
-		validate.testPassed();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}finally{
-		lib.closeDriver(driver);
-		}
-
+		header = new HeaderComponet(lib);
+		plp = new ProductListPage(lib);
+		app = new AddProductPage(lib);
 	}
-
+	@AfterMethod
+	public void endTest() {
+		driver.close();
+		driver.quit();
+	}
+	
+	@Test
+	public void firstTest() {
+		header.changStore(TestingData.ManassasStore);
+		lib.waitTime(2);
+		lib.clickElement(Locators.wineDepartment);
+		lib.waitTime(2);
+		app.rightPage( TestingData.winePageH1Text);
+		app.addItemToCart(5);
+		lib.clickElement(Locators.cartIcon);
+	}
+	
+	@Test
+	public void test_324() {
+		header.changStore(TestingData.ManassasStore); //change store
+		lib.waitTime(2);
+		header.fillSearchBox(TestingData.bora_324wineName); // search for specific product
+		String productName = plp.getProductName(1).toLowerCase(); // verify product in plp
+		Assert.assertTrue(productName.contains(TestingData.bora_324wineName.toLowerCase()));
+	}
+	
+	@Test
+	public void test_327(){
+		header.changStore(TestingData.WilmingtonStore);
+		lib.waitTime(2);
+		header.fillSearchBox(TestingData.bora_327productName);
+		String productName =plp.getProductName(1);
+		Assert.assertTrue(productName.contains(TestingData.bora_327productName));
+	}
 }
