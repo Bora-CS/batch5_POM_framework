@@ -18,6 +18,7 @@ public class HeaderComponet {
 		lib.clickElement(Locators.storeName);
 		lib.fillTextBox(Locators.searchStoreTextBox, store + Keys.ENTER);
 		lib.clickElement(Locators.header_button_firstPickUpHere);
+		lib.waitTime(2);
 		
 
 	}

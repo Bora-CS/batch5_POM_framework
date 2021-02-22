@@ -1,9 +1,7 @@
 package pages;
 
-import java.util.List;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+
 
 import testData.Locators;
 import testData.TestingData;
@@ -21,20 +19,21 @@ public class AddProductPage {
 		this.val = passedVal;
 	}
 
+	public boolean verifyElement (String elementText){
+		String actualText = lib.getText(Locators.winePLPHeader).toLowerCase();
+		if (actualText.equals(elementText)){
+		return true;
+		} 
+		return false;
+	}
+	
 	public void addItemToCart(int itemNumber) {
-		for (int i = 0; i <= itemNumber-1; i++) {
-			List<WebElement> elems = lib.addToCartButtonElement(Locators.addToCart_Buttons);
-			elems.get(i).click();
+		for (int i = 1; i <= itemNumber; i++) {
+			lib.clickElementWithXpath(Locators.addToCart_Buttons+"["+i+"]");
 			lib.clickElement(Locators.plp_alert_close);
-			if (i== itemNumber-1) {
+			if (i== itemNumber) {
 				break;
 			}
-		}
-	}
-	public void rightPage(String expectedData){
-		boolean exist = val.verifyElement(Locators.winePLPHeader, expectedData);
-		if (!exist) {
-			System.out.println("The text should be [" + expectedData + "]");
 		}
 	}
 	

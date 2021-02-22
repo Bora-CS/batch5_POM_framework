@@ -32,13 +32,16 @@ public class UtilityLibrary {
 	}
 
 	public void fillTextBox(By locator, String testData) {
-		WebDriverWait wait = new WebDriverWait(driver,10);
+		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 		driver.findElement(locator).sendKeys(testData);
 	}
 
 	public void clickElement(By locator) {
 		driver.findElement(locator).click();
+	}
+	public void clickElementWithXpath(String locatorString) {
+		driver.findElement(By.xpath(locatorString)).click();
 	}
 	public void closeDriver(WebDriver passedDriver){
 		this.driver = passedDriver;

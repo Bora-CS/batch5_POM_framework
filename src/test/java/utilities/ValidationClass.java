@@ -6,6 +6,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import testData.TestingData;
+
 public class ValidationClass {
 
 	private WebDriver driver;
@@ -14,13 +16,7 @@ public class ValidationClass {
 		this.driver = passedDriver;
 	}
 
-	public boolean verifyElement (By locator, String elementText){
-		String actualText = driver.findElement(locator).getText();
-		if (actualText.equalsIgnoreCase(elementText)){
-		return true;
-		} 
-		return false;
-	}
+	
 	public boolean verifyElementExist(By locator) {
 
 		List<WebElement> lists = driver.findElements(locator);

@@ -39,6 +39,7 @@ public class FirstDay {
 		plp = new ProductListPage(lib);
 		app = new AddProductPage(lib);
 	}
+	
 	@AfterMethod
 	public void endTest() {
 		driver.close();
@@ -48,10 +49,9 @@ public class FirstDay {
 	@Test
 	public void firstTest() {
 		header.changStore(TestingData.ManassasStore);
-		lib.waitTime(2);
 		lib.clickElement(Locators.wineDepartment);
 		lib.waitTime(2);
-		app.rightPage( TestingData.winePageH1Text);
+		app.verifyElement(TestingData.winePageH1Text);
 		app.addItemToCart(5);
 		lib.clickElement(Locators.cartIcon);
 	}
@@ -59,7 +59,6 @@ public class FirstDay {
 	@Test
 	public void test_324() {
 		header.changStore(TestingData.ManassasStore); //change store
-		lib.waitTime(2);
 		header.fillSearchBox(TestingData.bora_324wineName); // search for specific product
 		String productName = plp.getProductName(1).toLowerCase(); // verify product in plp
 		Assert.assertTrue(productName.contains(TestingData.bora_324wineName.toLowerCase()));
@@ -68,9 +67,15 @@ public class FirstDay {
 	@Test
 	public void test_327(){
 		header.changStore(TestingData.WilmingtonStore);
-		lib.waitTime(2);
 		header.fillSearchBox(TestingData.bora_327productName);
 		String productName =plp.getProductName(1);
 		Assert.assertTrue(productName.contains(TestingData.bora_327productName));
+	}
+	
+	@Test
+	public void test_342(){
+		header.changStore(TestingData.FairfaxStore);
+		header.fillSearchBox(TestingData.winePageH1Text);
+		plp.sortProduct(2);
 	}
 }

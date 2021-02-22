@@ -6,16 +6,4 @@
       <class name="regressionTest.FirstDay"/>
     </classes>
   </test> <!-- Default test -->
-  <test name="Default test(failed)">
-    <classes>
-      <class name="regressionTest.FirstDay">
-        <methods>
-          <include name="firstTest"/>
-          <include name="endTest"/>
-          <include name="test_327"/>
-          <include name="startTest"/>
-        </methods>
-      </class> <!-- regressionTest.FirstDay -->
-    </classes>
-  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
