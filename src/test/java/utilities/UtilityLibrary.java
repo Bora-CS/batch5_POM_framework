@@ -47,8 +47,7 @@ public class UtilityLibrary {
 	}
 	
 	public List addToCartButtonElement(By locator) {
-		List<WebElement> elems = driver.findElements(locator);
-		return elems;
+		return  driver.findElements(locator);		
 	}
 	
 }
