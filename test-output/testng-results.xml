@@ -1,19 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="1" ignored="3" total="5" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="2434" started-at="2021-02-20T17:29:32Z" finished-at="2021-02-20T17:29:35Z">
+  <suite name="Default suite" duration-ms="14863" started-at="2021-02-23T19:17:30Z" finished-at="2021-02-23T19:17:45Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="2434" started-at="2021-02-20T17:29:32Z" finished-at="2021-02-20T17:29:35Z">
+    <test name="Default test" duration-ms="14863" started-at="2021-02-23T19:17:30Z" finished-at="2021-02-23T19:17:45Z">
       <class name="regressionTest.FirstDay">
-        <test-method status="FAIL" signature="firstTest()[pri:0, instance:regressionTest.FirstDay@59fa1d9b]" name="firstTest" duration-ms="2319" started-at="2021-02-20T17:29:32Z" finished-at="2021-02-20T17:29:34Z">
-          <exception class="java.lang.NullPointerException">
+        <test-method status="PASS" signature="startTest()[pri:0, instance:regressionTest.FirstDay@28d25987]" name="startTest" is-config="true" duration-ms="4104" started-at="2021-02-23T19:17:30Z" finished-at="2021-02-23T19:17:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTest -->
+        <test-method status="PASS" signature="startTest()[pri:0, instance:regressionTest.FirstDay@28d25987]" name="startTest" duration-ms="3678" started-at="2021-02-23T19:17:34Z" finished-at="2021-02-23T19:17:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTest -->
+        <test-method status="PASS" signature="endTest()[pri:0, instance:regressionTest.FirstDay@28d25987]" name="endTest" is-config="true" duration-ms="167" started-at="2021-02-23T19:17:38Z" finished-at="2021-02-23T19:17:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTest -->
+        <test-method status="PASS" signature="startTest()[pri:0, instance:regressionTest.FirstDay@28d25987]" name="startTest" is-config="true" duration-ms="4083" started-at="2021-02-23T19:17:38Z" finished-at="2021-02-23T19:17:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTest -->
+        <test-method status="FAIL" signature="test_342()[pri:0, instance:regressionTest.FirstDay@28d25987]" name="test_342" duration-ms="2680" started-at="2021-02-23T19:17:42Z" finished-at="2021-02-23T19:17:45Z">
+          <exception class="org.openqa.selenium.InvalidSelectorException">
+            <message>
+              <![CDATA[invalid selector: Unable to locate an element with the xpath expression //*[text()='Pick Up Here'])[1] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//*[text()='Pick Up Here'])[1]' is not a valid XPath expression.
+  (Session info: chrome=88.0.4324.182)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/invalid_selector_exception.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'chunmeis-Air', ip: 'fe80:0:0:0:831:44a7:94ba:142f%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.182, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: /var/folders/7x/b9y32r_5691...}, goog:chromeOptions: {debuggerAddress: localhost:63756}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: fece0698c1b5c237d9aea8fe3c1c1408
+*** Element info: {Using=xpath, value=//*[text()='Pick Up Here'])[1]}]]>
+            </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-at java.util.concurrent.TimeUnit$3.convert(TimeUnit.java:113)
-at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteTimeouts.implicitlyWait(RemoteWebDriver.java:781)
-at regressionTest.FirstDay.firstTest(FirstDay.java:29)
+              <![CDATA[org.openqa.selenium.InvalidSelectorException: invalid selector: Unable to locate an element with the xpath expression //*[text()='Pick Up Here'])[1] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//*[text()='Pick Up Here'])[1]' is not a valid XPath expression.
+  (Session info: chrome=88.0.4324.182)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/invalid_selector_exception.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'chunmeis-Air', ip: 'fe80:0:0:0:831:44a7:94ba:142f%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.182, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: /var/folders/7x/b9y32r_5691...}, goog:chromeOptions: {debuggerAddress: localhost:63756}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: fece0698c1b5c237d9aea8fe3c1c1408
+*** Element info: {Using=xpath, value=//*[text()='Pick Up Here'])[1]}
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at utilities.UtilityLibrary.clickElement(UtilityLibrary.java:37)
+at pages.HeaderComponent.changesStore(HeaderComponent.java:20)
+at regressionTest.FirstDay.test_342(FirstDay.java:54)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -41,11 +92,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- org.openqa.selenium.InvalidSelectorException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- firstTest -->
-        <test-method status="PASS" signature="endTest()[pri:0, instance:regressionTest.FirstDay@59fa1d9b]" name="endTest" is-config="true" duration-ms="82" started-at="2021-02-20T17:29:34Z" finished-at="2021-02-20T17:29:35Z">
+        </test-method> <!-- test_342 -->
+        <test-method status="PASS" signature="endTest()[pri:0, instance:regressionTest.FirstDay@28d25987]" name="endTest" is-config="true" duration-ms="124" started-at="2021-02-23T19:17:45Z" finished-at="2021-02-23T19:17:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endTest -->
