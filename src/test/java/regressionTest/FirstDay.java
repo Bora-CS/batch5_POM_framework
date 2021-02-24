@@ -1,47 +1,17 @@
 package regressionTest;
 
-import java.util.List;
-import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import pages.HeaderComponent;
-import pages.ProductListPage;
 import testData.Locators;
 import testData.TestingData;
-import utilities.UtilityLibrary;
-import utilities.ValidationClass;
+import utilities.SetUpPage;
 
-public class FirstDay {
+public class FirstDay extends SetUpPage{
 
-	static WebDriver driver;
-	UtilityLibrary lib;
-	ValidationClass validate;
-	HeaderComponent header;
-	ProductListPage plp;
+	
 
-	@BeforeMethod
-	public void startTest() {
 
-		System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
-		driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
-		lib = new UtilityLibrary(driver);
-		validate = new ValidationClass(driver);
-		header = new HeaderComponent(lib);
-		plp = new ProductListPage(lib);
-
-		driver.get(TestingData.HomePageURL);
-
-	}
 
 	@Test // Jira ID: Bora-327
 	public void test_327() {
@@ -75,30 +45,23 @@ public class FirstDay {
 	public void firstTest() {
 
 		// 2. Change store
-		lib.clickElement(Locators.storeName);
-		lib.fillTextBox(Locators.searchStoreTextBox, TestingData.ManassasStore + Keys.ENTER);
-		lib.clickElement(Locators.pickUpButton_Manassas);
+		header.changeStore(TestingData.ManassasStore);
+
 
 		// 3. Goto wine PLP - Product List page
-		lib.clickElement(Locators.wineDepartment);
+		header.gotoWineDepartment();
 		// verify we are successfully land on the PLP
 		validate.verifyElementExist(Locators.winePLPHeader);
 
 		// 4. Add first 5 products into cart
-		List<WebElement> elems = driver.findElements(Locators.addToCart_Buttons);
-		for (int i = 0; i < 5; i++) {
-			elems.get(i).click();
-			lib.clickElement(Locators.plp_alert_close);
-		}
+		plp.addMultipleProduct(5);
+
 
 		// 5. Goto cart page
-		lib.clickElement(Locators.cartIcon);
-
+		header.gotoCartpage();
+		
 	}
 
-	@AfterMethod
-	public void endTest() {
-		driver.quit();
-	}
+
 
 }

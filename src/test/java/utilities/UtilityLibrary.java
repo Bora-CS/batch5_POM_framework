@@ -1,10 +1,15 @@
 package utilities;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import testData.Locators;
 
 public class UtilityLibrary {
 
@@ -38,4 +43,9 @@ public class UtilityLibrary {
 	public void clickElement(By locator){
 		driver.findElement(locator).click();
 	}
+	
+	public List<WebElement> getListOfElements(By locator){
+		return driver.findElements(locator);
+	}
+	
 }
