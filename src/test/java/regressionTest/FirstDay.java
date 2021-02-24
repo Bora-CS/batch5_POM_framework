@@ -9,10 +9,6 @@ import utilities.SetUpPage;
 
 public class FirstDay extends SetUpPage{
 
-	
-
-	
-
 
 	@Test // Jira ID: Bora-327
 	public void test_327() {
