@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 
 import testData.TestingData;
 
-public class ValidationClass {
+public class ValidationClass extends SetupPage{
 
 	private WebDriver driver;
 

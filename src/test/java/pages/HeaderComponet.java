@@ -3,15 +3,11 @@ package pages;
 import org.openqa.selenium.Keys;
 
 import testData.Locators;
-import testData.TestingData;
-import utilities.UtilityLibrary;
+import utilities.SetupPage;
 
-public class HeaderComponet {
-	UtilityLibrary lib;
 
-	public HeaderComponet(UtilityLibrary passedLib) {
-		this.lib = passedLib;
-	}
+public class HeaderComponet extends SetupPage {
+
 
 	public void changStore(String store) {
 
@@ -19,11 +15,13 @@ public class HeaderComponet {
 		lib.fillTextBox(Locators.searchStoreTextBox, store + Keys.ENTER);
 		lib.clickElement(Locators.header_button_firstPickUpHere);
 		lib.waitTime(2);
-		
 
 	}
 	public void fillSearchBox(String searchData){
 	lib.fillTextBox(Locators.header_searchBar, searchData);
 	lib.fillTextBox(Locators.header_searchBar, ""+ Keys.ENTER);
+	}
+	public void loginButton (){
+		lib.clickElement(Locators.header_signInButton);
 	}
 }

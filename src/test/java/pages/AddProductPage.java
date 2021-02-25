@@ -4,11 +4,12 @@ package pages;
 
 
 import testData.Locators;
-import testData.TestingData;
+
+import utilities.SetupPage;
 import utilities.UtilityLibrary;
 import utilities.ValidationClass;
 
-public class AddProductPage {
+public class AddProductPage extends SetupPage {
 	UtilityLibrary lib;
 	ValidationClass val;
 
