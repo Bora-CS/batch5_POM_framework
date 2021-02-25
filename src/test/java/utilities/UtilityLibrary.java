@@ -28,7 +28,7 @@ public class UtilityLibrary {
 
 	public void fillTextBox(By locator, String testData) {
 		WebDriverWait wait = new WebDriverWait(driver, 10);
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(locator));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 		driver.findElement(locator).sendKeys(testData);
 	}
 

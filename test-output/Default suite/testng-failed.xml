@@ -5,9 +5,9 @@
     <classes>
       <class name="regressionTest.FirstDay">
         <methods>
-          <include name="firstTest"/>
           <include name="endTest"/>
-          <include name="startTest"/>
+          <include name="satrtTest"/>
+          <include name="firstTest"/>
         </methods>
       </class> <!-- regressionTest.FirstDay -->
     </classes>

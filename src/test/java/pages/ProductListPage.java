@@ -3,11 +3,12 @@ package pages;
 import org.openqa.selenium.By;
 
 import testData.Locators;
+import utilities.SetUpPage;
 import utilities.UtilityLibrary;
 
-public class ProductListPage {
+public class ProductListPage extends SetUpPage {
 
-	UtilityLibrary lib;
+
 
 	public ProductListPage(UtilityLibrary passedLib) {
 		this.lib = passedLib;
@@ -20,4 +21,5 @@ public class ProductListPage {
 
 		return lib.getText(By.xpath(locatorText));
 	}
+	
 }

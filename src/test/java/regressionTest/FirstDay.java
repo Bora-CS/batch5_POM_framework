@@ -20,32 +20,11 @@ import pages.HeaderComponent;
 import pages.ProductListPage;
 import testData.Locators;
 import testData.TestingData;
+import utilities.SetUpPage;
 import utilities.UtilityLibrary;
 import utilities.ValidationClass;
 
-public class FirstDay {
-
-	static WebDriver driver;
-	UtilityLibrary lib;
-	ValidationClass validate;
-	HeaderComponent header;
-	ProductListPage plp;
-
-	@BeforeMethod
-	public void startTest() {
-
-		System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
-
-		driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		lib = new UtilityLibrary(driver);
-		validate = new ValidationClass(driver);
-		header = new HeaderComponent(lib);
-		plp = new ProductListPage(lib);
-
-		driver.get(TestingData.HomePageURL);
-
-	}
+public class FirstDay extends SetUpPage{
 
 	@Test(enabled = true)
 	public void firstTest() {
@@ -97,14 +76,11 @@ public class FirstDay {
 	@Test(enabled = false)
 	public void testBora_342() {
 
-	 header.fillSearchBox(TestingData.TestBora_342_SearchName);
-	 lib.clickElement(Locators.sort_Button);
-	
-	 
+		header.fillSearchBox(TestingData.TestBora_342_SearchName);
+		lib.clickElement(Locators.sort_Button);
+		validate.verifySortElementExist(Locators.plp_SortProductName,
+				TestingData.TestBora_342_SearchName.toLowerCase());
 
-	@AfterMethod
-	public void endTest() {
-		driver.quit();
 	}
 
 }

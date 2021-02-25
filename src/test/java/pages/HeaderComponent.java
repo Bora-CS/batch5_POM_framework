@@ -4,15 +4,11 @@ import org.openqa.selenium.Keys;
 
 import testData.Locators;
 import testData.TestingData;
+import utilities.SetUpPage;
 import utilities.UtilityLibrary;
 
-public class HeaderComponent {
+public class HeaderComponent extends SetUpPage {
 
-	UtilityLibrary lib;
-
-	public HeaderComponent(UtilityLibrary passedLib) {
-		this.lib = passedLib;
-	}
 
 	public void changeStore(String store) {
 		lib.clickElement(Locators.storeName);
@@ -23,5 +19,7 @@ public class HeaderComponent {
 	public void fillSearchBox(String searchData) {
 		lib.fillTextBox(Locators.Header_searchItemsTextBox, searchData + Keys.ENTER);
 	}
+	
+	
 
 }
