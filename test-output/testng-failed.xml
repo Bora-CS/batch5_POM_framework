@@ -3,12 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="regressionTest.Smoke_NegativeTesting">
+      <class name="regressionTest.Email_NegativeTesting">
         <methods>
-          <include name="signIn_negativeTesting"/>
+          <include name="endTest"/>
+          <include name="signUp_negativeTesting"/>
           <include name="startTest"/>
         </methods>
-      </class> <!-- regressionTest.Smoke_NegativeTesting -->
+      </class> <!-- regressionTest.Email_NegativeTesting -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

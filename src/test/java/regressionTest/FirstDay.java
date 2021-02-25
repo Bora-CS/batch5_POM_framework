@@ -7,12 +7,7 @@ import testData.Locators;
 import testData.TestingData;
 import utilities.SetUpPage;
 
-public class FirstDay extends SetUpPage{
-
-	
-
-	
-
+public class FirstDay extends SetUpPage {
 
 	@Test // Jira ID: Bora-327
 	public void test_327() {
@@ -48,7 +43,6 @@ public class FirstDay extends SetUpPage{
 		// 2. Change store
 		header.changeStore(TestingData.ManassasStore);
 
-
 		// 3. Goto wine PLP - Product List page
 		header.gotoWineDepartment();
 		// verify we are successfully land on the PLP
@@ -57,12 +51,9 @@ public class FirstDay extends SetUpPage{
 		// 4. Add first 5 products into cart
 		plp.addMultipleProduct(5);
 
-
 		// 5. Goto cart page
 		header.gotoCartpage();
-		
+
 	}
-
-
 
 }

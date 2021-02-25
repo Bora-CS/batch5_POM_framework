@@ -8,6 +8,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import pages.HeaderComponent;
+import pages.LoginPage;
 import pages.ProductListPage;
 import testData.TestingData;
 
@@ -18,6 +19,7 @@ public class SetUpPage {
 	public ValidationClass validate;
 	public HeaderComponent header;
 	public ProductListPage plp;
+	public LoginPage login;
 	
 	@BeforeMethod
 	public void startTest() {
@@ -29,7 +31,7 @@ public class SetUpPage {
 		lib = new UtilityLibrary(driver);
 		validate = new ValidationClass(driver);
 		header = new HeaderComponent(lib);
-		plp = new ProductListPage(lib);
+		plp = new ProductListPage();
 		
 		
 		driver.get(TestingData.HomePageURL);

@@ -3,12 +3,18 @@ package pages;
 import org.openqa.selenium.Keys;
 
 import testData.Locators;
-import testData.TestingData;
+//import testData.TestingData;
 import utilities.UtilityLibrary;
 
 public class HeaderComponent {
 
 	UtilityLibrary lib;
+
+//----------------------------	
+	//public void LoginPage(String email) {
+		//lib.clickElement(Locators.login);
+//}
+//===================	
 
 	public HeaderComponent(UtilityLibrary passedLib) {
 		this.lib = passedLib;
