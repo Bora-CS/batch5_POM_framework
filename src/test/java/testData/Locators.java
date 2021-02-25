@@ -15,4 +15,11 @@ public class Locators {
 	final public static By plp_alert_close = null;
 	
 	final public static By cartIcon = null;
+	
+	final public static By Header_searchBox = By.id("at_searchProducts"); 
+	final public static By Header_button_pickUpHere_first = By.xpath("(//*[text()='Pick Up Here'])[1]"); 
+	
+	final public static String PLP_listOfProductName = "(//h2[containts(@class,'title')])";
+	
+	
 }
