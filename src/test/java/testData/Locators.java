@@ -20,8 +20,12 @@ public class Locators {
 	final public static By Header_button_pickUpHere_first 
 		=By.xpath("(//*[text()='Pick Up Here'])[1]");
 	
-	
+	final public static By Header_signInButton 
+	= By.xpath("//*[contains(@class,'signInButton')]");
 	
 	
 	final public static String PLP_listOfProductName = "(//h2[contains(@class,'title')])";
+	public static final By Login_emailField = null;
+	public static final By Login_passwordField = null;
+	public static final By Login_emailErrorMessage = null;
 }

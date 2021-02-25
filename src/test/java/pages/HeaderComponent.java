@@ -3,20 +3,15 @@ package pages;
 import org.openqa.selenium.Keys;
 
 import testData.Locators;
-import testData.TestingData;
-import utilities.UtilityLibrary;
+import utilities.SetUpPage;
 
-public class HeaderComponent {
+public class HeaderComponent extends SetUpPage{
 
-	UtilityLibrary lib;
 
-	public HeaderComponent(UtilityLibrary passedLib) {
-		this.lib = passedLib;
-	}
 
 	public void changeStore(String store) {
-
 		lib.clickElement(Locators.storeName);
+		
 		lib.fillTextBox(Locators.searchStoreTextBox, store + Keys.ENTER);
 		lib.clickElement(Locators.Header_button_pickUpHere_first);
 	}

@@ -11,4 +11,7 @@ public class TestingData {
 	
 	final public static String Bora_324_wineName = "cloud break chardonnay";
 	final public static String Bora_327_searchTerm = "Tower Vodka";
+	public static final String Bora_351_wrongEmailAddress = "test@testcom";
+	public static final String ExpectingErrorMessageForEmail = "Email Address is required to proceed.";
+	public static final String ExpectingErrorMessageForPassword = "Password is required to proceed.";
 }

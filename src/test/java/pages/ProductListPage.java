@@ -6,15 +6,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import testData.Locators;
-import utilities.UtilityLibrary;
+import utilities.SetUpPage;
 
-public class ProductListPage {
+public class ProductListPage extends SetUpPage{
 
-	UtilityLibrary lib;
-	
-	public ProductListPage(UtilityLibrary passedLib) {
-		this.lib = passedLib;
-	}
+
 	
 	public String getProductNameByIndex(int index) {
 		String locatorText = Locators.PLP_listOfProductName      + "["  +index+"]";
