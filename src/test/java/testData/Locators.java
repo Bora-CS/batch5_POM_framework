@@ -36,7 +36,8 @@ public class Locators {
 	final public static By addToCart_Buttons = By.xpath("//*[text()='Add to Cart']");
 	final public static By plp_alert_close =By.id("agegate-closeX");
 
-	final public static By cartIcon =  By.id("at_cartIcon");
+	final public static By cartIcon = By.id("at_cartIcon");
+	final public static By Header_signInButton= By.xpath("//*[@contains(@class,'signInButton')]");
 	
 	
 	final public static By sort_Button=By.xpath("//*[@aria-label='Sort: Relevance']");
