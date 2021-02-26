@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="3" total="4" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="39827" started-at="2021-02-25T20:02:20Z" finished-at="2021-02-25T20:03:00Z">
+  <suite name="Default suite" duration-ms="46059" started-at="2021-02-25T23:55:58Z" finished-at="2021-02-25T23:56:45Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="39827" started-at="2021-02-25T20:02:20Z" finished-at="2021-02-25T20:03:00Z">
+    <test name="Default test" duration-ms="46059" started-at="2021-02-25T23:55:58Z" finished-at="2021-02-25T23:56:45Z">
       <class name="regressionTest.FirstDay">
-        <test-method status="PASS" signature="satrtTest()[pri:0, instance:regressionTest.FirstDay@26be92ad]" name="satrtTest" is-config="true" duration-ms="14241" started-at="2021-02-25T20:02:20Z" finished-at="2021-02-25T20:02:35Z">
+        <test-method status="PASS" signature="satrtTest()[pri:0, instance:regressionTest.FirstDay@224edc67]" name="satrtTest" is-config="true" duration-ms="13065" started-at="2021-02-25T23:55:58Z" finished-at="2021-02-25T23:56:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- satrtTest -->
-        <test-method status="PASS" signature="firstTest()[pri:0, instance:regressionTest.FirstDay@26be92ad]" name="firstTest" duration-ms="23769" started-at="2021-02-25T20:02:35Z" finished-at="2021-02-25T20:02:58Z">
+        <test-method status="PASS" signature="firstTest()[pri:0, instance:regressionTest.FirstDay@224edc67]" name="firstTest" duration-ms="32094" started-at="2021-02-25T23:56:12Z" finished-at="2021-02-25T23:56:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- firstTest -->
-        <test-method status="PASS" signature="endTest()[pri:0, instance:regressionTest.FirstDay@26be92ad]" name="endTest" is-config="true" duration-ms="1717" started-at="2021-02-25T20:02:58Z" finished-at="2021-02-25T20:03:00Z">
+        <test-method status="PASS" signature="endTest()[pri:0, instance:regressionTest.FirstDay@224edc67]" name="endTest" is-config="true" duration-ms="859" started-at="2021-02-25T23:56:44Z" finished-at="2021-02-25T23:56:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endTest -->

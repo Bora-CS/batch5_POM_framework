@@ -10,6 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -82,5 +83,25 @@ public class FirstDay extends SetUpPage{
 				TestingData.TestBora_342_SearchName.toLowerCase());
 
 	}
+	 @BeforeClass
+		public void satrtTest() {
+			System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
+
+			driver = new ChromeDriver();
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			driver.get(TestingData.HomePageURL);
+			
+			lib = new UtilityLibrary(driver);
+			validate = new ValidationClass(driver);
+			header = new HeaderComponent();
+			plp = new ProductListPage(lib);
+			
+			
+			driver.get(TestingData.HomePageURL);
+		}
+	 @AfterClass
+	 public void endTest() {
+		 driver.quit();
+	 }
 
 }
