@@ -22,13 +22,12 @@ public class LoginPage extends SetUpPage{
 	}
 
 	public void clickSingInButton() {
-		// TODO Auto-generated method stub
+		lib.clickElement(Locators.login_signInButton);
 		
 	}
 
 	public String getErrorMessageForPassword() {
-		// TODO Auto-generated method stub
-		return null;
+		return lib.getText(Locators.Login_passwordErrorMessage);
 	}
 	
 }

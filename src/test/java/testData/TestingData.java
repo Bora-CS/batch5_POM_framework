@@ -14,4 +14,6 @@ public class TestingData {
 	public static final String Bora_351_wrongEmailAddress = "test@testcom";
 	public static final String ExpectingErrorMessageForEmail = "Email Address is required to proceed.";
 	public static final String ExpectingErrorMessageForPassword = "Password is required to proceed.";
+	public static final String userName_1 = "test@gmail.com";
+	public static final String password_1 = "123456";
 }

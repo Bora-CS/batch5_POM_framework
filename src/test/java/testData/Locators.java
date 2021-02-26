@@ -25,7 +25,10 @@ public class Locators {
 	
 	
 	final public static String PLP_listOfProductName = "(//h2[contains(@class,'title')])";
-	public static final By Login_emailField = null;
-	public static final By Login_passwordField = null;
-	public static final By Login_emailErrorMessage = null;
+	public static final By Login_emailField = By.name("emailAddress");
+	public static final By Login_passwordField = By.name("password");
+	public static final By Login_emailErrorMessage = By.xpath("(//*[contains(@id,'TextInputErrMsg')])[1]");
+	public static final By Login_passwordErrorMessage = By.xpath("(//*[contains(@id,'TextInputErrMsg')])[2]");
+	public static final By login_signInButton = By.tagName("button");
+
 }

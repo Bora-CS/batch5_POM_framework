@@ -1,5 +1,9 @@
 package regressionTest;
 
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
+import org.testng.AssertJUnit;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -27,19 +31,28 @@ public class Smoke_NegativeTesting extends SetUpPage {
 		login.fillEmailAddress(TestingData.Bora_351_wrongEmailAddress);
 		login.fillPasswordField("");
 		String message = login.getErrorMessageForEmail();
-		Assert.assertEquals(message, TestingData.ExpectingErrorMessageForEmail);
+		AssertJUnit.assertEquals(message, TestingData.ExpectingErrorMessageForEmail);
 	}
 
 	@Test(priority = 2)
 	public void emptyPassword() {
 
-		login.clickSignInButtonFromHeader();
 		login.clickSingInButton();
 
 		String message = login.getErrorMessageForPassword();
-		Assert.assertEquals(message, TestingData.ExpectingErrorMessageForPassword);
+		AssertJUnit.assertEquals(message, TestingData.ExpectingErrorMessageForPassword);
 	}
 
+	@Test(priority = 3)
+	public void loginTest() {
+		
+		login.fillEmailAddress(TestingData.userName_1);
+		login.fillPasswordField(TestingData.password_1);
+		login.clickSingInButton();
+		//verify
+	}
+	
+	
 	@BeforeClass
 	public void startTest() {
 		
@@ -52,6 +65,7 @@ public class Smoke_NegativeTesting extends SetUpPage {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get(TestingData.HomePageURL);
 		login= new LoginPage();
+		lib = new UtilityLibrary(driver);
 	}
 	
 	

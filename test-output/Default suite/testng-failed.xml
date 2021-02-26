@@ -6,7 +6,6 @@
       <class name="regressionTest.Smoke_NegativeTesting">
         <methods>
           <include name="wrongUserNameFormat"/>
-          <include name="emptyPassword"/>
           <include name="startTest"/>
           <include name="endTest"/>
         </methods>
