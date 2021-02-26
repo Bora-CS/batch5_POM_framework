@@ -20,9 +20,9 @@ import utilities.ValidationClass;
 
 public class Smoke_NegativeTesting extends SetUpPage {
 
-	@Test
+	@Test(priority = 1)
 	public void wrongUserNameFormat() {
-		
+
 		login.clickSignInButtonFromHeader();
 		login.fillEmailAddress(TestingData.Bora_351_wrongEmailAddress);
 		login.fillPasswordField("");
@@ -30,21 +30,35 @@ public class Smoke_NegativeTesting extends SetUpPage {
 		Assert.assertEquals(message, TestingData.ExpectingErrorMessageForEmail);
 	}
 
-	@Test
+	@Test(priority = 2)
 	public void emptyPassword() {
-		
+
 		login.clickSignInButtonFromHeader();
 		login.clickSingInButton();
-		
+
 		String message = login.getErrorMessageForPassword();
 		Assert.assertEquals(message, TestingData.ExpectingErrorMessageForPassword);
 	}
-	
-	@Test
-	public void loginTest() {
-		//login successfully 
+
+	@BeforeClass
+	public void startTest() {
+		
+		//setup webDriver
+		//open browser - goto URL
+		//Initialize all of -Needed- pages object
+		System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
+		driver = new ChromeDriver();	
+		
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.get(TestingData.HomePageURL);
+		login= new LoginPage();
 	}
 	
-
+	
+	@AfterClass
+	public void endTest() {
+		//end test
+		driver.quit();
+	}
 	
 }

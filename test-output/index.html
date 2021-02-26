@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods, 2 failed,   1 passed</span>
+                    <span class="method-stats">2 methods, 2 failed,   </span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -111,20 +111,6 @@
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
-                  </li>
-                  <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
-                    </span>
-                    <div class="method-list-content passed suite-Default_suite">
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="regressionTest.Smoke_NegativeTesting" hash-for-method="loginTest">loginTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content passed suite-Default_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -147,14 +133,9 @@
                   <a name="emptyPassword">
                   </a> <!-- emptyPassword -->
                   <span class="method-name">emptyPassword</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [Password is required to proceed.] but found [null]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:453)
-	at org.testng.Assert.assertEquals(Assert.java:463)
-	at regressionTest.Smoke_NegativeTesting.emptyPassword(Smoke_NegativeTesting.java:40)
+                  <div class="stack-trace">java.lang.NullPointerException
+	at pages.LoginPage.clickSignInButtonFromHeader(LoginPage.java:9)
+	at regressionTest.Smoke_NegativeTesting.emptyPassword(Smoke_NegativeTesting.java:36)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -189,30 +170,7 @@
                   <a name="wrongUserNameFormat">
                   </a> <!-- wrongUserNameFormat -->
                   <span class="method-name">wrongUserNameFormat</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[contains(@class,&apos;signInButton&apos;)]&quot;}
-  (Session info: chrome=88.0.4324.192)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;Jayes-MBP.fios-router.home&apos;, ip: &apos;fe80:0:0:0:88a:333c:bd0f:3a46%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.15.7&apos;, java.version: &apos;1.8.0_221&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.192, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: /var/folders/4x/dwmw68c94kv...}, goog:chromeOptions: {debuggerAddress: localhost:58241}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 802aecd7a9d1d33ca15014d5fa3c8436
-*** Element info: {Using=xpath, value=//*[contains(@class,&apos;signInButton&apos;)]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at utilities.UtilityLibrary.clickElement(UtilityLibrary.java:44)
+                  <div class="stack-trace">java.lang.NullPointerException
 	at pages.LoginPage.clickSignInButtonFromHeader(LoginPage.java:9)
 	at regressionTest.Smoke_NegativeTesting.wrongUserNameFormat(Smoke_NegativeTesting.java:26)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -246,25 +204,10 @@ Session ID: 802aecd7a9d1d33ca15014d5fa3c8436
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Default_suite-class-failed -->
-          <div class="suite-Default_suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">regressionTest.Smoke_NegativeTesting</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="loginTest">
-                  </a> <!-- loginTest -->
-                  <span class="method-name">loginTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-passed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/4x/dwmw68c94kv1r0xbm0_sb9gc0000gn/T/testng-eclipse--2485182/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/4x/dwmw68c94kv1r0xbm0_sb9gc0000gn/T/testng-eclipse-1741679508/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -313,24 +256,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'wrongUserNameFormat')
 data.setCell(0, 2, 'regressionTest.Smoke_NegativeTesting')
-data.setCell(0, 3, 10033);
+data.setCell(0, 3, 7);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'emptyPassword')
 data.setCell(1, 2, 'regressionTest.Smoke_NegativeTesting')
-data.setCell(1, 3, 332);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'loginTest')
-data.setCell(2, 2, 'regressionTest.Smoke_NegativeTesting')
-data.setCell(2, 3, 2);
+data.setCell(1, 3, 2);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 10 seconds</span>
+              <span class="suite-total-time">Total running time: 9 ms</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -364,22 +303,18 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">emptyPassword</span>
-                <span class="method-start">6389 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">loginTest</span>
-                <span class="method-start">6724 ms</span>
+                <span class="method-name">wrongUserNameFormat</span>
+                <span class="method-start">3245 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">wrongUserNameFormat</span>
-                <span class="method-start">6728 ms</span>
+                <span class="method-name">emptyPassword</span>
+                <span class="method-start">3256 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">endTest</span>
-                <span class="method-start">16763 ms</span>
+                <span class="method-start">3260 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
