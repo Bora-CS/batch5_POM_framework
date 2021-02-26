@@ -7,7 +7,7 @@ import utilities.SetupPage;
 import utilities.UtilityLibrary;
 
 public class ProductListPage extends SetupPage {
-	UtilityLibrary lib;
+	
 
 
 	public String getProductName(int index){

@@ -27,15 +27,16 @@ public class SetupPage {
 	public void startTest(){
 		System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
 		driver = new ChromeDriver ();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.get(TestingData.HomePageURL);
+
 		lib = new UtilityLibrary(driver);
 		validate = new ValidationClass(driver);
+		
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get(TestingData.HomePageURL);
+		
 		header = new HeaderComponet();
 		plp = new ProductListPage();
-		app = new AddProductPage(lib);
+		//app = new AddProductPage(lib);
 		sip = new SignInPage();
 	}
 	

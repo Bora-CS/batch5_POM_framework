@@ -20,7 +20,7 @@ public class Locators {
 	final public static By sort_selectButton = By.xpath("//button[@aria-label='Sort: Relevance']");
 	final public static By sortBy_customerRating = By.xpath("//div[text()='Customer Ratings']");
 	final public static String sortBy_index = "(//div[@role='option'])";
-	final public static By header_signInButton =By.xpath("//a[@class='signInButton__1S9Dx3cv']");
+	final public static By header_signInButton =By.xpath("//a[@anclick='header_Sign In']");
 	final public static By signInPage_email=By.xpath("//input[@type='email']");
 	final public static By errorMessage_email = By.id("TextInputErrMsg982047");
 	final public static By signInButton = By.xpath("//button[@type='submit']");

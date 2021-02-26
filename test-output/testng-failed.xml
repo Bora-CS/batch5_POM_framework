@@ -3,18 +3,21 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test verbose="2" name="Default test">
     <classes>
-      <class name="regressionTest.Smoke_negativeTesting"/>
+      <class name="regressionTest.FirstDay"/>
     </classes>
   </test> <!-- Default test -->
   <test name="Default test(failed)">
     <classes>
-      <class name="regressionTest.Smoke_negativeTesting">
+      <class name="regressionTest.FirstDay">
         <methods>
+          <include name="test_342"/>
+          <include name="firstTest"/>
+          <include name="test_324"/>
           <include name="startTest"/>
           <include name="endTest"/>
-          <include name="bora_signInFail"/>
+          <include name="test_327"/>
         </methods>
-      </class> <!-- regressionTest.Smoke_negativeTesting -->
+      </class> <!-- regressionTest.FirstDay -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
