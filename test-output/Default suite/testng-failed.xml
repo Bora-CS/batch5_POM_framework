@@ -5,10 +5,9 @@
     <classes>
       <class name="regressionTest.Smoke_NegativeTesting">
         <methods>
-          <include name="signIn_negativeTesting"/>
-          <include name="emptyPassword"/>
-          <include name="satrtTest"/>
           <include name="endTest"/>
+          <include name="satrtTest"/>
+          <include name="loginTest"/>
         </methods>
       </class> <!-- regressionTest.Smoke_NegativeTesting -->
     </classes>

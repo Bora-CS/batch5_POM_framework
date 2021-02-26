@@ -50,25 +50,5 @@ public class Smoke_NegativeTesting extends SetUpPage {
 		login.clickSginInButton();
 
 	}
-	 @BeforeClass
-		public void satrtTest() {
-			System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
-
-			driver = new ChromeDriver();
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			driver.get(TestingData.HomePageURL);
-			
-			lib = new UtilityLibrary(driver);
-			validate = new ValidationClass(driver);
-			header = new HeaderComponent();
-			plp = new ProductListPage(lib);
-			
-			
-			driver.get(TestingData.HomePageURL);
-		}
-	 @AfterClass
-	 public void endTest() {
-		 driver.quit();
-	 }
 
 }
