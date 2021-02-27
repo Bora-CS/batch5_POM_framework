@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test thread-count="5" name="Test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-<<<<<<< HEAD
       <class name="regressionTest.Email_NegativeTesting">
         <methods>
           <include name="endTest"/>
@@ -11,15 +10,6 @@
           <include name="startTest"/>
         </methods>
       </class> <!-- regressionTest.Email_NegativeTesting -->
-=======
-      <class name="regressionTest.FirstDay">
-        <methods>
-          <include name="endTest"/>
-          <include name="test_327"/>
-          <include name="startTest"/>
-        </methods>
-      </class> <!-- regressionTest.FirstDay -->
->>>>>>> main
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

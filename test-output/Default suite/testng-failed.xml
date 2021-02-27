@@ -5,14 +5,9 @@
     <classes>
       <class name="regressionTest.Email_NegativeTesting">
         <methods>
-<<<<<<< HEAD
           <include name="endTest"/>
           <include name="signUp_negativeTesting"/>
-=======
-          <include name="wrongUserNameFormat"/>
->>>>>>> main
           <include name="startTest"/>
-          <include name="endTest"/>
         </methods>
       </class> <!-- regressionTest.Email_NegativeTesting -->
     </classes>
