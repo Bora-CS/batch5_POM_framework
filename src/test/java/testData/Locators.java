@@ -30,5 +30,7 @@ public class Locators {
 	public static final By Login_emailErrorMessage = By.xpath("(//*[contains(@id,'TextInputErrMsg')])[1]");
 	public static final By Login_passwordErrorMessage = By.xpath("(//*[contains(@id,'TextInputErrMsg')])[2]");
 	public static final By login_signInButton = By.tagName("button");
+	public static final By plp_listOfProductSize = By.xpath("//*[contains(@class,'productCard')]//h2/span");
+	public static final By plp_listOfProductPrice = By.xpath("//*[contains(@class,'productCard')]//span[contains(text(),'$')]");
 
 }
