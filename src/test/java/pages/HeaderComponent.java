@@ -3,13 +3,17 @@ package pages;
 import org.openqa.selenium.Keys;
 
 import testData.Locators;
+<<<<<<< HEAD
 //import testData.TestingData;
 import utilities.UtilityLibrary;
+=======
+import utilities.SetUpPage;
+>>>>>>> main
 
-public class HeaderComponent {
+public class HeaderComponent extends SetUpPage{
 
-	UtilityLibrary lib;
 
+<<<<<<< HEAD
 //----------------------------	
 	//public void LoginPage(String email) {
 		//lib.clickElement(Locators.login);
@@ -19,10 +23,12 @@ public class HeaderComponent {
 	public HeaderComponent(UtilityLibrary passedLib) {
 		this.lib = passedLib;
 	}
+=======
+>>>>>>> main
 
 	public void changeStore(String store) {
-
 		lib.clickElement(Locators.storeName);
+		
 		lib.fillTextBox(Locators.searchStoreTextBox, store + Keys.ENTER);
 		lib.clickElement(Locators.Header_button_pickUpHere_first);
 	}

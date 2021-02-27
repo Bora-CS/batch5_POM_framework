@@ -7,7 +7,12 @@ import testData.Locators;
 import testData.TestingData;
 import utilities.SetUpPage;
 
+<<<<<<< HEAD
 public class FirstDay extends SetUpPage {
+=======
+public class FirstDay extends SetUpPage{
+
+>>>>>>> main
 
 	@Test // Jira ID: Bora-327
 	public void test_327() {

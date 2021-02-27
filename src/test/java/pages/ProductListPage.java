@@ -7,9 +7,15 @@ import org.openqa.selenium.WebElement;
 
 import testData.Locators;
 import utilities.SetUpPage;
+<<<<<<< HEAD
 import utilities.UtilityLibrary;
 
 public class ProductListPage extends SetUpPage {
+=======
+
+public class ProductListPage extends SetUpPage{
+
+>>>>>>> main
 
 	
 	public String getProductNameByIndex(int index) {

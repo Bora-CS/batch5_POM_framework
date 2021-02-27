@@ -15,7 +15,7 @@ import testData.TestingData;
 public class SetUpPage {
 
 	public WebDriver driver;
-	public UtilityLibrary lib;
+	public static UtilityLibrary lib;
 	public ValidationClass validate;
 	public HeaderComponent header;
 	public ProductListPage plp;
@@ -30,16 +30,27 @@ public class SetUpPage {
 
 		lib = new UtilityLibrary(driver);
 		validate = new ValidationClass(driver);
+<<<<<<< HEAD
 		header = new HeaderComponent(lib);
 		plp = new ProductListPage();
+=======
+		header = new HeaderComponent();
+		plp = new ProductListPage();
+		login = new LoginPage();
+>>>>>>> main
 		
 		
 		driver.get(TestingData.HomePageURL);
+		System.out.println("This is before method from Setup page");
+		lib.waitTime(3);
 		
 	}
 	
 	@AfterMethod
 	public void endTest() {
+		lib.waitTime(3);
+		System.out.println("This is After method from Setup page");
+
 		driver.quit();
 	}
 	

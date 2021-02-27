@@ -20,6 +20,7 @@ public class Locators {
 	final public static By cartIcon = null;
 
 	final public static By Header_searchTextBox = By.id("at_searchProducts");
+<<<<<<< HEAD
 	final public static By Header_button_pickUpHere_first = By.xpath("(//*[text()='Pick Up Here'])[1]");
 
 	final public static String PLP_listOfProductName = "(//h2[contains(@class,'title')])";
@@ -30,4 +31,22 @@ public class Locators {
     //-------
 	public static final By Login_passwordErrorMessage = null;
 	// ========
+=======
+	final public static By Header_button_pickUpHere_first 
+		=By.xpath("(//*[text()='Pick Up Here'])[1]");
+	
+	final public static By Header_signInButton 
+	= By.xpath("//*[contains(@class,'signInButton')]");
+	
+	
+	final public static String PLP_listOfProductName = "(//h2[contains(@class,'title')])";
+	public static final By Login_emailField = By.name("emailAddress");
+	public static final By Login_passwordField = By.name("password");
+	public static final By Login_emailErrorMessage = By.xpath("(//*[contains(@id,'TextInputErrMsg')])[1]");
+	public static final By Login_passwordErrorMessage = By.xpath("(//*[contains(@id,'TextInputErrMsg')])[2]");
+	public static final By login_signInButton = By.tagName("button");
+	public static final By plp_listOfProductSize = By.xpath("//*[contains(@class,'productCard')]//h2/span");
+	public static final By plp_listOfProductPrice = By.xpath("//*[contains(@class,'productCard')]//span[contains(text(),'$')]");
+
+>>>>>>> main
 }
