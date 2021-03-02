@@ -4,13 +4,15 @@ import org.openqa.selenium.Keys;
 
 import testData.Locators;
 
-public class Quiz_Header {
+public class Quiz_Header extends Quiz_SetUpPage{
+
 
 	
 	public void changeStore(String store) {
 		lib.clickElement(Locators.storeName);
 		
 		lib.fillTextBox(Locators.searchStoreTextBox, store + Keys.ENTER);
+		lib.waitTime(2);
 		lib.clickElement(Locators.Header_button_pickUpHere_first);
 	}
 

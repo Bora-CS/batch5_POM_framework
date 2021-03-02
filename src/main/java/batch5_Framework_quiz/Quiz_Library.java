@@ -8,13 +8,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Quiz_Library {
+public class Quiz_Library{
 
-	
-private WebDriver driver;
+
+	private WebDriver driver;
 	
 	public Quiz_Library(WebDriver passedDriver){
-		
+		this.driver = passedDriver;
 	}
 	
 	
