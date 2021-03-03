@@ -1,59 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+<testng-results skipped="0" failed="0" ignored="3" total="9" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="35" started-at="2021-02-27T21:03:53Z" finished-at="2021-02-27T21:03:53Z">
+  <suite name="Default suite" duration-ms="56" started-at="2021-03-03T01:23:28Z" finished-at="2021-03-03T01:23:28Z">
     <groups>
-      <group name="regression">
-        <method signature="AccountTest.tset4()[pri:0, instance:practices.AccountTest@c038203]" name="tset4" class="practices.AccountTest"/>
-      </group> <!-- regression -->
-      <group name="smoke">
-        <method signature="AccountTest.tset2()[pri:0, instance:practices.AccountTest@c038203]" name="tset2" class="practices.AccountTest"/>
-        <method signature="AccountTest.tset4()[pri:0, instance:practices.AccountTest@c038203]" name="tset4" class="practices.AccountTest"/>
-      </group> <!-- smoke -->
-      <group name="account">
-        <method signature="AccountTest.tset1()[pri:0, instance:practices.AccountTest@c038203]" name="tset1" class="practices.AccountTest"/>
-        <method signature="AccountTest.tset2()[pri:0, instance:practices.AccountTest@c038203]" name="tset2" class="practices.AccountTest"/>
-        <method signature="AccountTest.tset3()[pri:0, instance:practices.AccountTest@c038203]" name="tset3" class="practices.AccountTest"/>
-        <method signature="AccountTest.tset4()[pri:0, instance:practices.AccountTest@c038203]" name="tset4" class="practices.AccountTest"/>
-        <method signature="AccountTest.tset5()[pri:0, instance:practices.AccountTest@c038203]" name="tset5" class="practices.AccountTest"/>
-      </group> <!-- account -->
     </groups>
-    <test name="Default test" duration-ms="35" started-at="2021-02-27T21:03:53Z" finished-at="2021-02-27T21:03:53Z">
-      <class name="practices.AccountTest">
-        <test-method status="PASS" signature="testBeforeTest()[pri:0, instance:practices.AccountTest@c038203]" name="testBeforeTest" is-config="true" duration-ms="7" started-at="2021-02-27T21:03:53Z" finished-at="2021-02-27T21:03:53Z">
+    <test name="Default test" duration-ms="56" started-at="2021-03-03T01:23:28Z" finished-at="2021-03-03T01:23:28Z">
+      <class name="dataDrivenTest.SimpleTesting">
+        <test-method status="PASS" signature="test4(java.util.HashMap)[pri:0, instance:dataDrivenTest.SimpleTesting@675d3402]" name="test4" duration-ms="9" started-at="2021-03-03T01:23:28Z" data-provider="dataSourceForMultipletest" finished-at="2021-03-03T01:23:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{productId=1234665, price=9, qty=3}]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testBeforeTest -->
-        <test-method status="PASS" signature="tset1()[pri:0, instance:practices.AccountTest@c038203]" name="tset1" duration-ms="4" started-at="2021-02-27T21:03:53Z" finished-at="2021-02-27T21:03:53Z">
+        </test-method> <!-- test4 -->
+        <test-method status="PASS" signature="test4(java.util.HashMap)[pri:0, instance:dataDrivenTest.SimpleTesting@675d3402]" name="test4" duration-ms="1" started-at="2021-03-03T01:23:28Z" data-provider="dataSourceForMultipletest" finished-at="2021-03-03T01:23:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{productId=1234948, price=12, qty=5}]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tset1 -->
-        <test-method status="PASS" signature="tset2()[pri:0, instance:practices.AccountTest@c038203]" name="tset2" duration-ms="1" started-at="2021-02-27T21:03:53Z" finished-at="2021-02-27T21:03:53Z">
+        </test-method> <!-- test4 -->
+        <test-method status="PASS" signature="test4(java.util.HashMap)[pri:0, instance:dataDrivenTest.SimpleTesting@675d3402]" name="test4" duration-ms="1" started-at="2021-03-03T01:23:28Z" data-provider="dataSourceForMultipletest" finished-at="2021-03-03T01:23:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{productId=348572, price=9, qty=12}]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tset2 -->
-        <test-method status="PASS" signature="tset3()[pri:0, instance:practices.AccountTest@c038203]" name="tset3" duration-ms="1" started-at="2021-02-27T21:03:53Z" finished-at="2021-02-27T21:03:53Z">
+        </test-method> <!-- test4 -->
+        <test-method status="PASS" signature="test5(java.util.HashMap)[pri:0, instance:dataDrivenTest.SimpleTesting@675d3402]" name="test5" duration-ms="2" started-at="2021-03-03T01:23:28Z" data-provider="dataSourceForMultipletest" finished-at="2021-03-03T01:23:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{productId=1234665, price=9, qty=3}]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tset3 -->
-        <test-method status="PASS" signature="tset4()[pri:0, instance:practices.AccountTest@c038203]" name="tset4" duration-ms="1" started-at="2021-02-27T21:03:53Z" finished-at="2021-02-27T21:03:53Z">
+        </test-method> <!-- test5 -->
+        <test-method status="PASS" signature="test5(java.util.HashMap)[pri:0, instance:dataDrivenTest.SimpleTesting@675d3402]" name="test5" duration-ms="1" started-at="2021-03-03T01:23:28Z" data-provider="dataSourceForMultipletest" finished-at="2021-03-03T01:23:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{productId=1234948, price=12, qty=5}]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tset4 -->
-        <test-method status="PASS" signature="tset5()[pri:0, instance:practices.AccountTest@c038203]" name="tset5" duration-ms="1" started-at="2021-02-27T21:03:53Z" finished-at="2021-02-27T21:03:53Z">
+        </test-method> <!-- test5 -->
+        <test-method status="PASS" signature="test5(java.util.HashMap)[pri:0, instance:dataDrivenTest.SimpleTesting@675d3402]" name="test5" duration-ms="2" started-at="2021-03-03T01:23:28Z" data-provider="dataSourceForMultipletest" finished-at="2021-03-03T01:23:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{productId=348572, price=9, qty=12}]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tset5 -->
-        <test-method status="PASS" signature="testAfterClass()[pri:0, instance:practices.AccountTest@c038203]" name="testAfterClass" is-config="true" duration-ms="0" started-at="2021-02-27T21:03:53Z" finished-at="2021-02-27T21:03:53Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAfterClass -->
-        <test-method status="PASS" signature="testAfterSuite()[pri:0, instance:practices.AccountTest@c038203]" name="testAfterSuite" is-config="true" duration-ms="0" started-at="2021-02-27T21:03:53Z" finished-at="2021-02-27T21:03:53Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAfterSuite -->
-      </class> <!-- practices.AccountTest -->
+        </test-method> <!-- test5 -->
+      </class> <!-- dataDrivenTest.SimpleTesting -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
