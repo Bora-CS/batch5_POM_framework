@@ -19,7 +19,7 @@ public class ProductListPage extends SetUpPage{
 		// passed index as 3
 		return lib.getText(By.xpath(locatorText));
 	}
-
+	
 	public void addMultipleProduct(int total) {
 		List<WebElement> elems = lib.getListOfElements(Locators.addToCart_Buttons);
 		

@@ -32,5 +32,6 @@ public class Locators {
 	public static final By login_signInButton = By.tagName("button");
 	public static final By plp_listOfProductSize = By.xpath("//*[contains(@class,'productCard')]//h2/span");
 	public static final By plp_listOfProductPrice = By.xpath("//*[contains(@class,'productCard')]//span[contains(text(),'$')]");
+	public static Object firstproductIdPrice=By.xpath("//*[@class='pricing__1WsMi-bu ']");
 
 }

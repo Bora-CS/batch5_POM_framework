@@ -7,10 +7,21 @@ import testData.Locators;
 import testData.TestingData;
 import utilities.SetUpPage;
 
-public class FirstDay extends SetUpPage{
+public class FirstDay extends SetUpPage {
 
-
-	@Test // Jira ID: Bora-327
+	
+	@Test
+	public void test_123() {
+		test = report.createTest("test_123");
+		System.out.println(" Test .....");
+	}
+	
+	@Test 
+	public void test_234() {
+		test = report.createTest("test_234");
+		Assert.fail();
+	}
+	@Test (enabled = false)// Jira ID: Bora-327
 	public void test_327() {
 
 		header.changeStore(TestingData.Wilmington);
@@ -44,7 +55,6 @@ public class FirstDay extends SetUpPage{
 		// 2. Change store
 		header.changeStore(TestingData.ManassasStore);
 
-
 		// 3. Goto wine PLP - Product List page
 		header.gotoWineDepartment();
 		// verify we are successfully land on the PLP
@@ -53,12 +63,9 @@ public class FirstDay extends SetUpPage{
 		// 4. Add first 5 products into cart
 		plp.addMultipleProduct(5);
 
-
 		// 5. Goto cart page
 		header.gotoCartpage();
-		
+
 	}
-
-
 
 }

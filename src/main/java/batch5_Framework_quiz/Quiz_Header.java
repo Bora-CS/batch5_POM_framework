@@ -4,7 +4,7 @@ import org.openqa.selenium.Keys;
 
 import testData.Locators;
 
-public class Quiz_Header {
+public class Quiz_Header extends Quiz_SetUpPage {
 
 	
 	public void changeStore(String store) {
@@ -17,6 +17,7 @@ public class Quiz_Header {
 	public void fillSeachBox(String searchData) {
 		lib.fillTextBox(Locators.Header_searchTextBox, searchData);
 		lib.fillTextBox(Locators.Header_searchTextBox, "" + Keys.ENTER);
+		lib.waitTime(2);
 	}
 	
 	

@@ -14,7 +14,7 @@ public class Quiz_Library {
 private WebDriver driver;
 	
 	public Quiz_Library(WebDriver passedDriver){
-		
+		this.driver=passedDriver;
 	}
 	
 	

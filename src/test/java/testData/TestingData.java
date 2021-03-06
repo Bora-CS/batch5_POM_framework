@@ -16,4 +16,7 @@ public class TestingData {
 	public static final String ExpectingErrorMessageForPassword = "Password is required to proceed.";
 	public static final String userName_1 = "test@gmail.com";
 	public static final String password_1 = "123456";
+	public static final String LaurelStroe = "Laurel, MD";
+	public static final String SearchName = "hennessy vs cognac";
+	
 }
