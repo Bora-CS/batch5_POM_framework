@@ -1,5 +1,6 @@
 package dataDrivenTest;
 
+import java.lang.reflect.Method;
 import java.util.HashMap;
 
 import org.testng.Assert;
@@ -78,9 +79,7 @@ public class SimpleTesting {
 		Object[][] data = {sum1,sum2,sum3};
 		return data;
 	}
-	
-	
-	
+
 	
 	@Test(dataProvider = "dataSourceForMultipletest")
 	public void test4(HashMap<String, Integer> data) {
@@ -137,10 +136,49 @@ public class SimpleTesting {
 	
 	
 	
+	@DataProvider(name = "multiTestData_byMethod")
+	public Object[][] dataSourceForMultipleTestData_byMethod(Method m) {
+		
+		
+		//method m -->  multiDataTest_1
+		//				multiDataTest_2
+		String methodName = m.getName();
+		
+		// qty, price, productId
+		
+		Object[] sum1 = {3, 9, 1234665};
+		Object[] sum2 = {5, 12, 1234948};
+		Object[] sum3 = {12, 9, 348572};
+
+		switch(methodName) {
+			case "multiDataTest_1": //   Object[3][2]
+				Object[][] data= {{sum1[0],sum1[1]},{sum2[0],sum2[1]}};
+				return data; //--> 1. return data  2. end the method 
+
+			case "multiDataTest_2"://   Object[3][2]
+				Object[][] data2= {{sum1[2],sum1[1]},{sum2[2],sum2[1]}};
+				return data2;
+			default:               //   Object[3][3]
+				Object[][] data3 = {sum1,sum2,sum3};
+				return data3;
+
+		}
+
+	}
 	
-	
-	
-	
+	@Test(dataProvider = "multiTestData_byMethod")
+	public void multiDataTest_1(int qty, int price) {
+
+		//qty, price
+		
+		
+	}
+	@Test(dataProvider = "multiTestData_byMethod")
+	public void multiDataTest_2(int productId, int price) {
+		
+		//productId, price
+		
+	}
 	
 	
 	
