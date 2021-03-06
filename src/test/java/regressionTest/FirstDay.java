@@ -10,15 +10,28 @@ import utilities.SetUpPage;
 public class FirstDay extends SetUpPage{
 
 
-	@Test // Jira ID: Bora-327
+	@Test
+	public void test_alwaysPass(){
+		test = report.createTest("test_alwaysPass");
+		System.out.println("this is test_alwaysPass");
+	}
+	
+	@Test
+	public void test_willFail() {
+		test = report.createTest("test_willFail");
+		Assert.fail();
+	}
+	
+	
+	@Test(enabled = false) // Jira ID: Bora-327
 	public void test_327() {
 
 		header.changeStore(TestingData.Wilmington);
 
 		header.fillSeachBox(TestingData.Bora_327_searchTerm);
 
-		String name = plp.getProductNameByIndex(1);
-		Assert.assertTrue(name.contains(TestingData.Bora_327_searchTerm));
+//		String name = plp.getProductNameByIndex(1);
+//		Assert.assertTrue(name.contains(TestingData.Bora_327_searchTerm));
 	}
 
 	// Jira id: Bora-324
