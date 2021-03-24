@@ -52,11 +52,36 @@ public class GetDataFromFile {
 
 		return null;
 	}
+	@Test()
+	public void test() {
 
-	@Test(dataProvider = "dataSource")
+		
+		
+		String a = "java";
+		String b = "java";
+		String c = new String("java");
+		String d = new String("java");
+		
+		a.equals(c);
+		
+		System.out.println("a and b "+a==b);
+		System.out.println("c and d "+c==d);
+		
+
+	}
+	
+	
+	@Test(dataProvider = "dataSource", enabled = false)
 	public void test(String productId, String price) {
 
 		System.out.println("test data is: "+productId+"   "+price);
+		
+		
+		String a = "java";
+		String b = "java";
+		String c = new String("java");
+		String d = new String("java");
+		
 
 	}
 
